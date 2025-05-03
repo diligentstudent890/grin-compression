@@ -22,7 +22,7 @@ import java.util.AbstractMap;
 public class HuffmanTree {
     private static final short EOF = 256;
     private final Node root;
-    private final Map<Short,String> codes;
+    private final Map<Short, String> codes;
 
     private static class Node implements Comparable<Node> {
         short value;

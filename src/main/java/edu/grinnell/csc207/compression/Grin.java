@@ -15,7 +15,7 @@ public class Grin {
      */
     public static void decode(String infile, String outfile) {
         try {
-            BitInputStream in  = new BitInputStream(infile);
+            BitInputStream in = new BitInputStream(infile);
             BitOutputStream out = new BitOutputStream(outfile);
 
             int magic = in.readBits(32);
@@ -65,7 +65,7 @@ public class Grin {
     public static void encode(String infile, String outfile) {
         Map<Short, Integer> freqs = createFrequencyMap(infile);
         try {
-            BitInputStream in  = new BitInputStream(infile);
+            BitInputStream in = new BitInputStream(infile);
             BitOutputStream out = new BitOutputStream(outfile);
 
             out.writeBits(0x736, 32);
@@ -86,8 +86,7 @@ public class Grin {
      * @param args the command-line arguments.
      */
     public static void main(String[] args) {
-        if (args.length != 3 ||
-            !(args[0].equals("encode") || args[0].equals("decode"))) {
+        if (args.length != 3 || !(args[0].equals("encode") || args[0].equals("decode"))) {
             System.out.println("Usage: java Grin <encode|decode> <infile> <outfile>");
             return;
         }

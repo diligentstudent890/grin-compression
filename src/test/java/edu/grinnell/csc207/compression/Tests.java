@@ -1,8 +1,6 @@
 package edu.grinnell.csc207.compression;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
-
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Map;
@@ -31,10 +29,8 @@ class Tests {
 
     Path grin = temp.resolve("out.grin");
     Grin.encode(in.toString(), grin.toString());
-
     Path out = temp.resolve("output.txt");
     Grin.decode(grin.toString(), out.toString());
-
     byte[] orig = Files.readAllBytes(in);
     byte[] round = Files.readAllBytes(out);
     assertArrayEquals(orig, round);
@@ -45,7 +41,6 @@ class Tests {
     Path fake = temp.resolve("notgrin.txt");
     Files.write(fake, "hello".getBytes());
     Path out = temp.resolve("shouldfail.txt");
-
     assertThrows(IllegalArgumentException.class, () ->
       Grin.decode(fake.toString(), out.toString())
     );
