@@ -1,13 +1,14 @@
 # Project: Grin Compression
 
-Authors: (_TODO: fill in names here!_)
+Authors: Brian He
 
 ## Resources
 
-*   (_TODO: fill in resources here!_)
-*   ...
-*   ...
+*   JDK23
+*   VSCODE
+*   https://osera.cs.grinnell.edu/ttap/data-structures-labs/grin-compression.html
+*   https://en.wikipedia.org/wiki/Huffman_coding
 
 ## Revision Log
 
-*   (_TODO: fill in your changes to your project here!_)
+*   I thought this is the initial version.
